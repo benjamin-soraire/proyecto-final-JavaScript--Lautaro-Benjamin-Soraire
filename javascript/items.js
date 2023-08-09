@@ -2,7 +2,7 @@ const muebles =[
     {
         id: "sofa elegante",
         titulo: "sofa elegante Arkel",
-        imagen: "/img/sofa-elegante.jpg",
+        imagen: "../img/Sofa-Elegante.jpg",
         precio: "$35000",
         categotia:{
             nombre: "sillas",
@@ -12,7 +12,7 @@ const muebles =[
     {
         id: "sillon reclinable",
         titulo: "sillon reclinable Arkel",
-        imagen: "/img/sillon-reclinable.jpg",
+        imagen: "../img/sillon-reclinable.jpg",
         precio: "$58000",
         categotia:{
             nombre: "sillas",
@@ -22,7 +22,7 @@ const muebles =[
     {
         id: "silla ergonomica",
         titulo: "silla-ergonomica Arkel",
-        imagen: "/img/silla-ergonomica.jpg",
+        imagen: "../img/silla-ergonomica.jpg",
         precio: "$90000",
         categotia:{
             nombre: "sillas",
@@ -32,7 +32,7 @@ const muebles =[
     {
         id: "mesa de roble rustica",
         titulo: "mesa de roble rustica Arkel",
-        imagen: "/img/mesa-de-roble-rustica.jpg",
+        imagen: "../img/Mesa-de-Roble-Rustica.jpg",
         precio: "$150000",
         categotia:{
             nombre: "mesas",
@@ -42,7 +42,7 @@ const muebles =[
     {
         id: "mesa de centro contemporanea",
         titulo: "mesa contemporanea Arkel",
-        imagen: "/img/mesa-de-centro-contemporanea.jpg",
+        imagen: "../img/Mesa-de-Centro-Contemporanea.jpg",
         precio: "$45000",
         categotia:{
             nombre: "mesa",
@@ -52,7 +52,7 @@ const muebles =[
     {
         id: "estanteria minimalista",
         titulo: " estanteria milimalista Arkel",
-        imagen: "/img/estanteria-minimalista.jpg",
+        imagen: "../img/Estanteria-Minimalista.jpg",
         precio: "$6000",
         categotia:{
             nombre: "amoblados",
@@ -62,7 +62,7 @@ const muebles =[
     {
         id: "escritorio multifuncional",
         titulo: "escritorio multifuncional Arkel",
-        imagen: "/img/escritorio-multifuncional.jpg",
+        imagen: "../img/Escritorio-Multifuncional.jpg",
         precio: "$37500",
         categotia:{
             nombre: "mesas",
@@ -72,7 +72,7 @@ const muebles =[
     {
         id: "comoda vintage",
         titulo: "comoda vintage Arkel",
-        imagen: "/img/comoda-vintage.jpg ",
+        imagen: "../img/Comoda-Vintage.jpg",
         precio:"$45800",
         categotia:{
             nombre: "amoblados",
@@ -82,7 +82,7 @@ const muebles =[
     {
         id: "cama acolchada deluxe",
         titulo: " cama acolchada deluxe Arkel",
-        imagen: "/img/cama-acolchada-deluxe.jpg",
+        imagen: "../img/Cama-Acolchada-Deluxe.jpg",
         precio: "$65748",
         categotia:{
             nombre: "amoblados",
@@ -92,7 +92,7 @@ const muebles =[
     {
         id: "armario organizador espacioso",
         titulo: "armario organizador Arkel",
-        imagen: "/img/armario-organizador-espacioso.jpg",
+        imagen: "../img/Armario-Organizador-Espacioso.jpg",
         precio: "$25811",
         categotia:{
             nombre: "amoblados",
