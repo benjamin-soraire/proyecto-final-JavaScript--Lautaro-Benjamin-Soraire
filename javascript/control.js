@@ -1,19 +1,37 @@
-console.table(muebles)
+const contenedorProductos = document.querySelector("#contenedor-productos");
+const botonesCategoria = document.querySelectorAll(".boton-categoria");
 
-function filtrarPorPrecio(precioMax){
-    const filtrados = muebles.filter((muebles) =>  muebles.precio <= precioMax);
-    //console.log(filtrados)//
-    return filtrados
-}	
+function cargarProducto(){
 
-let precioMueble = parseFloat(prompt("ingresar precio maximo (0-salir)"))
-while(precioMueble != 0){
-    if(isNaN(precioMueble) || precioMueble < 0){
-        alert("ingresa un valor valido");
-    }
-    else{
-        const mueblesFiltrados = filtrarPorPrecio(precioMueble);
-    console.table(mueblesFiltrados);
-    }
-    precioMueble = parseFloat(prompt("ingresar precio maximo (0-salir)"));
+    contenedorProductos.innerHTML = "";
+
+    muebles.forEach(muebles => {
+
+        const div = document.createElement("div");
+        div.classList.add("producto");
+        div.innerHTML = `
+        <img class="producto-imagen" src="${muebles.imagen}" alt=" ${muebles.titulo} ">
+                    <div class="producto-detalle">
+                        <h3 class="producto-titulo"> ${muebles.titulo} </h3>
+                        <p class="producto-precio">${muebles.precio} </p>
+                        <button class="producto-agregar" id="${muebles.id}">agregar</button>
+                    </div>
+        `;
+        contenedorProductos.append(div);
+    })
 }
+
+cargarProducto(muebles);
+
+botonesCategoria.forEach(boton => (
+    boton.addEventListener("click", (e) => {
+
+        botonesCategoria.forEach(boton => boton.classList.remove("active"));
+        e.currentTarget.classList.add("active");
+
+        const mueblesBoton  = muebles.filter(muebles => muebles.categotia.id === e.currentTarget.id)
+        cargarProducto(mueblesBoton)
+
+    })
+
+))

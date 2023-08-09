@@ -4,43 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estilos/estilos.scss">
+    <link rel="stylesheet" href="./estilos/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title></title>
 </head>
 <body>
-    <body>
-        <header>
-            <h1>Tu Tienda en Línea</h1>
+    <div class="wrapper">
+        <aside>
+            <header>
+                <h1 class="logo">Muebleria de importacion "Arkel"</h1>
+            </header>
             <nav>
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Ofertas</a></li>
-                    <li><a href="#">Contacto</a></li>
+                <ul class="menu">
+                    <li><button id="todos" class="boton-menu boton-categoria active"><i class="bi bi-hand-thumbs-up"></i>Todos los productos</button>
+                    </li>
+                    <li><button id="mesa" class="boton-menu boton-categoria"><i class="bi bi-hand-index"></i>mesas</button>
+                    </li>
+                    <li><button id="silla" class="boton-menu boton-categoria"><i class="bi bi-hand-index"></i>sillas</button>
+                    </li>
+                    <li><button id="amoblado" class="boton-menu boton-categoria"><i class="bi bi-hand-index"></i>amoblados</button>
+                    </li>
+                    <li><a class="boton-menu boton-carrito" href="./carrito.htm"><i class="bi bi-cart-check-fill"></i>carrito<span class="numero">0</span></a></li>
                 </ul>
             </nav>
-        </header>
+            <footer>
+                    <p class="texto-footer">proyecto benjamin soraire</p>
+            </footer>
+        </aside>
         <main>
-            <!-- Aquí podrías tener la lista de productos, categorías, etc. -->
-            <!-- Ejemplo: -->
-            <section class="productos">
-                <h2>Productos Destacados</h2>
-                <div class="producto">
-                    <img src="" alt="Nombre del producto">
-                    <h3>Nombre del Producto</h3>
-                    <p>Precio: $XX.XX</p>
-                    <button>Agregar al Carrito</button>
-                </div>
-                <!-- Puedes repetir este bloque para cada producto destacado -->
-            </section>
+            <h2 class="titulo-principal">todos los productos </h2>
+            <div id="contenedor-productos" class="contenedor-productos">
+                
+            </div>
         </main>
-    
-        <!-- Pie de página -->
-        <footer>
-            <!-- Información del pie de página, enlaces útiles, etc. -->
-            <p>Todos los derechos reservados &copy; 2023 Tu Tienda en Línea</p>
-        </footer>
-    </body>
+
+    </div>
     <script src="./javascript/items.js"></script>
     <script src="./javascript/control.js"></script>
 </body>
