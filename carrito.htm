@@ -31,8 +31,8 @@
         <main>
             <h2 class="titulo-principal">carrito</h2>
             <div class="contenedor-producto">
-                <p class="carrito-vacio">tu carrito esta vacio. <i class="bi bi-emoji-frown"></i></p>
-                <div class="carrito-productos disabled">
+                <p id="carrito-vacio" class="carrito-vacio disabled">tu carrito esta vacio. <i class="bi bi-emoji-frown"></i></p>
+                <div id="carrito-productos" class="carrito-productos disabled">
                     <div class="carrito-producto">
                         <img class= "carrito-producto-img" src="./img/Armario-Organizador-Espacioso.jpg" alt="">
                         <div class="carrito-producto-titulo">
@@ -74,7 +74,7 @@
                             <button class="carrito-producto-eliminar"><i class="bi bi-trash3"></i></button>
                     </div>
                 </div>
-                <div class="carrito-acciones disabled">
+                <div id="carrito-acciones" class="carrito-acciones disabled">
                     <div class="carrito-acciones-izquierda">
                         <button class="carrito-acciones-izquierda-vaciar">vaciar carrito.</button>
                     </div>
@@ -86,11 +86,11 @@
                         <button class="carrito-acciones-comprar">comprar ahora!</button>
                     </div>
                 </div>
-                <p class="carrito-comprado disabled">gracias por tu compra!<i class="bi bi-emoji-laughing"></i></p>
+                <p id="carrito-comprado" class="carrito-comprado disabled">gracias por tu compra!<i class="bi bi-emoji-laughing"></i></p>
             </div>
         </main>
     </div>
     <script src="./javascript/items.js"></script>
-    <script src="./javascript/control.js"></script>
+    <script src="./javascript/carrito.js"></script>
 </body>
 </html>

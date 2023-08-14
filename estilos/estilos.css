@@ -52,12 +52,12 @@ aside{
   padding: 1rem;
   font-size: .85rem;
   align-items: center;
+  width: 100%;
 }
 
 .boton-menu.active{
   background-color: #3e6b48  ;
   color: wheat;
-  width: 100%;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   position: relative;
