@@ -1,3 +1,11 @@
+let muebles = [];
+fetch("./javascript/items.json")
+    .then(Response => Response.json())
+    .then(data => {
+        muebles = data;
+        cargarProducto(muebles);
+    })
+
 const contenedorProductos = document.querySelector("#contenedor-productos");
 const botonesCategoria = document.querySelectorAll(".boton-categoria");
 const tituloPrincipal = document.querySelector("#titulo-principal");
@@ -5,6 +13,7 @@ let botonesAgregar = document.querySelectorAll(".producto-agregar");
 const numerito = document.querySelector("#numerito");
 
 function cargarProducto(mueblesElegidos) {
+
 
     contenedorProductos.innerHTML = "";
 
@@ -16,7 +25,7 @@ function cargarProducto(mueblesElegidos) {
         <img class="producto-imagen" src="${muebles.imagen}" alt=" ${muebles.titulo} ">
                     <div class="producto-detalle">
                         <h3 class="producto-titulo"> ${muebles.titulo} </h3>
-                        <p class="producto-precio">${muebles.precio} </p>
+                        <p class="producto-precio">$${muebles.precio} </p>
                         <button class="producto-agregar" id="${muebles.id}">agregar</button>
                     </div>
         `;
@@ -26,7 +35,7 @@ function cargarProducto(mueblesElegidos) {
     actualizarBotonesAgregar();
 }
 
-cargarProducto(muebles);
+
 
 botonesCategoria.forEach(boton => {
 
@@ -58,8 +67,33 @@ function actualizarBotonesAgregar() {
         boton.addEventListener("click", agregarAlCarrito);
     });
 }
-const productosEnCarrito = [];
+
+let productosEnCarrito;
+
+let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
+
+if(productosEnCarritoLS){
+    productosEnCarrito = JSON.parse(productosEnCarritoLS);
+    actualizarNumerito();
+}else {
+    productosEnCarrito = [];
+}
+
 function agregarAlCarrito(e) {
+    Toastify({
+        text: "Agregado al carrito!",
+        duration: 3000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+        background: "#b5b479",
+        },
+        onClick: function(){} // Callback after click
+    }).showToast();
+
+
     const idBoton = e.currentTarget.id;
     const productoAgregado = muebles.find(muebles => muebles.id === idBoton);
     if (productosEnCarrito.some(muebles => muebles.id === idBoton)) {
@@ -80,3 +114,6 @@ function actualizarNumerito() {
     let nuevoNumerito = productosEnCarrito.reduce((acc, muebles)=> acc + muebles.cantidad, 0);
     numerito.innerText = nuevoNumerito;
 }
+
+
+
